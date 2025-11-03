@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeProvider';
 
@@ -13,27 +14,81 @@ if (typeof window !== 'undefined') {
 export default function Home() {
   const { language, setLanguage, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const heroRef = useRef(null);
+  const skillsRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
 
   useEffect(() => {
     // Hero animations
-    gsap.fromTo('.hero-title', 
+    const tl = gsap.timeline();
+    tl.fromTo('.hero-title', 
       { y: 100, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }
-    );
-    
-    gsap.fromTo('.hero-subtitle', 
+    )
+    .fromTo('.hero-subtitle', 
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.3, ease: 'power3.out' }
-    );
-
-    gsap.fromTo('.hero-buttons', 
+      { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5'
+    )
+    .fromTo('.hero-buttons', 
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.6, ease: 'power3.out' }
+      { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5'
     );
 
-    // Section animations
+    // Skills animation with stagger
+    gsap.fromTo('.skill-item', 
+      { scale: 0, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 0.5,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: '.skills-section',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+        }
+      }
+    );
+
+    // Experience animation
+    gsap.fromTo('.experience-item', 
+      { x: -100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '.experience-section',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+        }
+      }
+    );
+
+    // Projects animation
+    gsap.fromTo('.project-item', 
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '.projects-section',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+        }
+      }
+    );
+
+    // General section animations
     gsap.utils.toArray('.animate-section').forEach((section: any) => {
       gsap.fromTo(section, 
         { y: 50, opacity: 0 },
@@ -44,6 +99,8 @@ export default function Home() {
           scrollTrigger: {
             trigger: section,
             start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
           }
         }
       );
@@ -156,6 +213,8 @@ export default function Home() {
     t('extracurricular.courses')
   ];
 
+  const navItems = ['about', 'experience', 'skills', 'projects', 'education', 'contact'];
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       {/* Header */}
@@ -165,7 +224,7 @@ export default function Home() {
           
           <div className="flex items-center space-x-4 sm:space-x-6">
             {/* Language Switcher */}
-            <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
+            <div className="hidden sm:flex space-x-1 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
               <button 
                 onClick={() => setLanguage('en')}
                 className={`px-2 sm:px-3 py-1 rounded-md text-xs sm:text-sm font-medium transition-colors ${
@@ -196,12 +255,72 @@ export default function Home() {
               {theme === 'light' ? '🌙' : '☀️'}
             </button>
 
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex space-x-6 lg:space-x-8">
+              {navItems.map((item) => (
+                <a 
+                  key={item}
+                  href={`#${item}`}
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors text-sm lg:text-base"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t(item)}
+                </a>
+              ))}
+            </nav>
+
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
-              <span className="text-gray-600 dark:text-gray-300">☰</span>
+            <button 
+              className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <span className="text-gray-600 dark:text-gray-300">{isMenuOpen ? '✕' : '☰'}</span>
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+            <div className="px-4 py-2 space-y-1">
+              {/* Mobile Language Switcher */}
+              <div className="flex space-x-2 py-2">
+                <button 
+                  onClick={() => setLanguage('en')}
+                  className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    language === 'en' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300'
+                  }`}
+                >
+                  English
+                </button>
+                <button 
+                  onClick={() => setLanguage('de')}
+                  className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    language === 'de' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300'
+                  }`}
+                >
+                  Deutsch
+                </button>
+              </div>
+              
+              {/* Mobile Navigation Items */}
+              {navItems.map((item) => (
+                <a 
+                  key={item}
+                  href={`#${item}`}
+                  className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors border-b border-gray-100 dark:border-gray-800"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t(item)}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
@@ -226,7 +345,7 @@ export default function Home() {
                 </a>
                 <a 
                   href="/Lebenslauf.pdf"
-                  download
+                  download="Guirauld_Tayon_CV"
                   className="border border-blue-600 text-blue-600 dark:text-blue-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors font-medium text-sm sm:text-base text-center"
                 >
                   {t('downloadCV')}
@@ -272,8 +391,14 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Photo Section */}
             <div className="flex justify-center order-2 lg:order-1">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold">
-                Photo
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+                <Image
+                  src="/photo.jpg"
+                  alt="Guirauld Tayon"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
             
@@ -323,7 +448,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 sm:py-20 px-4 sm:px-6 animate-section">
+      <section id="skills" ref={skillsRef} className="skills-section py-16 sm:py-20 px-4 sm:px-6 animate-section">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 gradient-text">{t('skills')}</h2>
           
@@ -346,7 +471,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 dark:bg-gray-800 animate-section">
+      <section id="experience" ref={experienceRef} className="experience-section py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 dark:bg-gray-800 animate-section">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 gradient-text">{t('experience')}</h2>
           
@@ -379,13 +504,13 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 animate-section">
+      <section id="projects" ref={projectsRef} className="projects-section py-16 sm:py-20 px-4 sm:px-6 animate-section">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 gradient-text">{t('projects')}</h2>
           
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="bg-white dark:bg-gray-900 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover-lift">
+              <div key={index} className="project-item bg-white dark:bg-gray-900 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover-lift">
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800 dark:text-white">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">{project.description}</p>
                 
@@ -412,7 +537,7 @@ export default function Home() {
                   ))}
                 </div>
                 
-                {project.link && (
+                {project.link && project.link !== '#' && (
                   <a 
                     href={project.link} 
                     target="_blank" 
