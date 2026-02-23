@@ -133,7 +133,11 @@ export default function Home() {
     { name: 'Java', icon: '☕' },
     { name: 'PHP', icon: '🐘' },
     { name: 'Chakra UI', icon: '🎨' },
-    { name: 'Tailwind', icon: '💨' }
+    { name: 'Tailwind', icon: '💨' },
+      { name: 'Team Lead – Testing', icon: '⭐' },
+      { name: 'Maestro (Mobile UI Automation)', icon: '📱' },
+      { name: 'Mobile Testing (Flutter)', icon: '🧪' },
+      { name: 'Test Planning & Strategy', icon: '📋' },
   ];
 
   const experiences = [
@@ -166,26 +170,126 @@ export default function Home() {
   ];
 
   const projects = [
-    {
+      {
+      // We3ve - FWE repo
       title: t('project1.title'),
-      description: t('project1.description'),
-      technologies: ["Flutter", "Express", "MySQL", "Automation Testing", "PlayStore Deployment"],
-      link: "https://we3ve.de/",
-      contributions: [
+        description: t('project1.description'),
+        technologies: [
+        "Flutter",
+        "Express",
+        "MySQL",
+        "REST API",
+        "Automation Testing",
+        "PlayStore Deployment",
+        "GitHub Actions",
+        "Docker",
+        "Nginx",
+        "Hetzner Cloud"
+    ],
+        link: "https://we3ve.de/",
+        repo: "https://github.com/guita237/FWE",
+        contributions: [
         t('project1.contribution1'),
         t('project1.contribution2')
-      ]
-    },
-    {
-      title: t('project2.title'),
-      description: t('project2.description'),
-      technologies: ["React", "Vite", "TypeScript", "Tailwind", "Chakra UI", "Express", "Socket.IO", "PostgreSQL"],
-      link: "#",
-      contributions: [
-        t('project2.contribution1'),
-        t('project2.contribution2')
-      ]
-    }
+    ]
+},
+{
+    // NHIE – Never-have-I-ever Website
+    title: t('project2.title'),
+        description: t('project2.description'),
+    technologies: [
+    "React",
+    "Vite",
+    "TypeScript",
+    "Tailwind",
+    "Chakra UI",
+    "Express",
+    "Socket.IO",
+    "PostgreSQL",
+    "Docker",
+    "Nginx",
+    "Hetzner Cloud",
+    "GitHub Actions"
+],
+    link: "https://nhie.guita.dev",
+    repo: "https://github.com/guita237/NHIE-SocketIO",
+    contributions: [
+    t('project2.contribution1'),
+    t('project2.contribution2')
+]
+},
+{
+    // Bachelor Prototype – KI Testcase
+    title: t('project3.title'),
+        description: t('project3.description'),
+    technologies: [
+    "Python",
+    "Flask",
+    "PostgreSQL",
+    "RAG",
+    "LLM",
+    "OpenAI API",
+    "Docker",
+    "Nginx",
+    "Hetzner Cloud",
+    "GitHub CI/CD"
+],
+    link: "https://thesis.guita.dev",
+    repo: "https://github.com/guita237/KI-Testcase",
+    contributions: [
+    t('project3.contribution1'),
+    t('project3.contribution2'),
+    t('project3.contribution3')
+]
+},
+{
+    // Quiz Challenge – Java Spring Boot & Angular
+    title: t('project4.title'),
+        description: t('project4.description'),
+    technologies: [
+    "Java",
+    "Spring Boot",
+    "Angular",
+    "TypeScript",
+    "MySQL",
+    "REST API",
+    "Docker",
+    "Nginx",
+    "Hetzner Cloud",
+    "GitHub Actions"
+],
+    link: "https://quizz.guita.dev",
+    repo: "https://github.com/guita237/Quizz-Challenge",
+    contributions: [
+    t('project4.contribution1'),
+    t('project4.contribution2')
+]
+},
+
+      {
+          // Events Platform – events.guita.dev
+          title: t('project5.title'),
+          description: t('project5.description'),
+          technologies: [
+              "TypeScript",
+              "Node.js",
+              "Express",
+              "PostgreSQL",
+              "React",
+              "Vite",
+              "Docker",
+              "Nginx",
+              "Hetzner Cloud",
+              "GitHub CI/CD"
+          ],
+          link: "https://events.guita.dev",
+          repo: "https://github.com/guita237/FWE",
+          contributions: [
+              t('project5.contribution1'),
+              t('project5.contribution2'),
+              t('project5.contribution3')
+          ]
+      }
   ];
 
   const education = [
@@ -203,7 +307,7 @@ export default function Home() {
     }
   ];
 
-  const languages = ["French", "German", "English", "Ukrainian"];
+  const languages = ["French", "German", "English"];
   const extracurricular = [
     t('extracurricular.football'),
     t('extracurricular.music'),
@@ -366,17 +470,17 @@ export default function Home() {
   role: 'IT Student & Full-Stack Developer',
   location: 'Dieburg, Germany',
   education: 'Hochschule Darmstadt',
-  languages: ['FR', 'DE', 'EN', 'UA'],
+  languages: ['FR', 'DE', 'EN'],
   currentRole: 'Working Student IT Operations',
   skills: {
-    frontend: ['React', 'Next.js', 'Flutter'],
-    backend: ['Node.js', 'Python', 'Express'],
+    frontend: ['React','Vite', 'Next.js', 'Flutter', 'TypeScript', 'Tailwind', 'Chakra UI', 'Angular'],
+    backend: ['Node.js', 'Python', 'Express', 'Flask', 'C++', 'Java SpringBoot', 'PHP'],
     database: ['PostgreSQL', 'MySQL', 'MongoDB'],
-    cloud: ['Azure', 'Docker', 'CI/CD'],
+    cloud: ['Azure', 'Docker', 'CI/CD', Hetzner],
     ai: ['LLM', 'RAG', 'Prompt Engineering']
   },
   availability: 'Open to new opportunities',
-  contact: 'guirauld.tayon@stud.h-da.de'
+  contact: 'noumboussitayon@gmail.com'
 };`}
               </pre>
             </div>
@@ -507,49 +611,79 @@ export default function Home() {
       <section id="projects" ref={projectsRef} className="projects-section py-16 sm:py-20 px-4 sm:px-6 animate-section">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 gradient-text">{t('projects')}</h2>
-          
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
-            {projects.map((project, index) => (
-              <div key={index} className="project-item bg-white dark:bg-gray-900 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover-lift">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800 dark:text-white">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">{project.description}</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 dark:text-white mb-3 text-sm sm:text-base">Key Contributions:</h4>
-                  <ul className="space-y-2">
-                    {project.contributions.map((contribution, i) => (
-                      <li key={i} className="flex items-start">
-                        <span className="text-green-500 mr-3 mt-1">✓</span>
-                        <span className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">{contribution}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
-                    <span 
-                      key={tech}
-                      className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium"
+
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        className="project-item bg-white dark:bg-gray-900 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover-lift"
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                {project.link && project.link !== '#' && (
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm sm:text-base"
-                  >
-                    {t('viewProject')} →
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
+                        {/* Title */}
+                        <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800 dark:text-white">
+                            {project.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
+                            {project.description}
+                        </p>
+
+                        {/* Contributions */}
+                        <div className="mb-6">
+                            <h4 className="font-semibold text-gray-800 dark:text-white mb-3 text-sm sm:text-base">
+                                Key Contributions:
+                            </h4>
+                            <ul className="space-y-2">
+                                {project.contributions.map((contribution, i) => (
+                                    <li key={i} className="flex items-start">
+                                        <span className="text-green-500 mr-3 mt-1">✓</span>
+                                        <span className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+                {contribution}
+              </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Technologies */}
+                        <div className="flex flex-wrap gap-2 mb-6">
+                            {project.technologies.map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium"
+                                >
+            {tech}
+          </span>
+                            ))}
+                        </div>
+
+                        {/* Links (Live + GitHub) */}
+                        <div className="flex flex-wrap gap-4 mt-4">
+                            {project.link && project.link !== '' && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm sm:text-base"
+                                >
+                                    {t('viewProject')} →
+                                </a>
+                            )}
+
+                            {project.repo && (
+                                <a
+                                    href={project.repo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:underline font-medium text-sm sm:text-base"
+                                >
+                                    GitHub Repo →
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
       </section>
 
@@ -644,7 +778,7 @@ export default function Home() {
                 </svg>
                 <span className="text-sm sm:text-base">LinkedIn</span>
               </a>
-              <a href="https://github.com/Guirauld" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 bg-gray-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-900 transition-colors">
+              <a href="https://github.com/guita237" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 bg-gray-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-900 transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>

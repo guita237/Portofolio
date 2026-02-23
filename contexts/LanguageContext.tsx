@@ -28,8 +28,9 @@ const translations = {
     'location': 'Dieburg, Hessen',
     'email': 'guirauld.tayon@stud.h-da.de',
     'phone': '+49 176 29053181',
-    'description': `My name is Guirauld Tayon. I am a passionate IT student and developer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love working with modern web technologies, AI-driven solutions, and cloud computing.`,
-    'currentJob': 'Working Student IT Operations at StandardLife',
+      'description': `My name is Guirauld Tayon. I am a passionate IT student and developer in my daily life.I have strong software testing experience, including test case design, manual testing and automation. I worked extensively with Maestro for mobile UI automation and led testing efforts in real projects, ensuring quality and stability across backend, frontend and mobile applications. I love to learn and explore new technologies and am passionate about problem-solving. I love working with modern web technologies, AI-driven solutions, and cloud computing. Through more than three years in IT support, I have developed strong communication skills, enjoy working directly with users, and feel comfortable explaining complex technical topics in a clear and simple way.`,
+
+      'currentJob': 'Working Student IT Operations at StandardLife',
     'bachelorThesis': 'Bachelor Thesis – AI-driven Automation of Software Testing',
     'educationHDA': 'Computer Science B.Sc. - Hochschule Darmstadt',
     'languages': 'Languages: French, German, English, Ukrainian',
@@ -55,19 +56,36 @@ const translations = {
     'experience2.point2': 'Combined Retrieval-Augmented Generation (RAG), OpenAI GPT-4o API, and SentenceTransformer models to enrich context and generate structured test cases',
     'experience2.point3': 'Implemented a backend with Python (Flask) and PostgreSQL; designed a modern UI using React, Vite, and TypeScript',
     'experience2.point4': 'Key components: requirement clarity check (Q&A system), semantic search with embeddings, prompt engineering, and format validation',
-    'experience2.point5': 'Deployment setup with Docker and Azure Cloud; CI/CD pipeline planned using GitLab and Terraform',
-
+      'experience2.point5': 'Deployment setup with Docker, Nginx and Hetzner Cloud; CI/CD pipeline implemented with GitHub and GitHub Actions.',
     // Projects
     'project1.title': 'We3ve - Electromobility Platform',
-    'project1.description': 'Extension of an existing mobile app (we3ve) on the topic of electromobility (car sharing and booking) with additional functions and refactoring.',
-    'project1.contribution1': 'Team leader of the automation test team (Backend, Frontend)',
-    'project1.contribution2': 'PlayStore deployment',
+      'project1.description': 'Worked on the extension of the We3ve mobile application (electromobility platform) and led the testing efforts (team of testers). Implemented Maestro-based mobile UI automation for Flutter while ensuring high-quality releases.',
+      'project1.contribution1': 'Team Lead of the testing team (manual & automation), responsible for planning the test strategy, organising testing tasks and ensuring overall product quality.',
+      'project1.contribution2': 'Implemented mobile UI automated tests using Maestro for the Flutter application.',
+      'project1.contribution3': 'Collaborated with backend and frontend teams to validate API flows and debug mobile issues.',
 
     'project2.title': 'Never-have-I-Ever Website',
     'project2.description': 'Multiplayer game website with user registration, playlist creation, question management, and real-time multiplayer rooms using Socket.IO.',
     'project2.contribution1': 'Full-stack development with real-time communication using Socket.IO',
     'project2.contribution2': 'User registration and room management system',
 
+
+      'project3.title': 'KI-basierter Testfall-Generator (Bachelorarbeit)',
+      'project3.description': 'Prototype that automatically generates structured test cases from textual requirements using Large Language Models, RAG and a Python/Flask backend deployed on Hetzner.',
+      'project3.contribution1': 'Entwurf und Implementierung der kompletten Backend-Architektur in Python (Flask) mit PostgreSQL, RAG und semantischer Suche.',
+      'project3.contribution2': 'Entwicklung des Web-Frontends mit React, Vite und TypeScript und Integration mit dem KI-Backend.',
+      'project3.contribution3': 'Deployed the full system using Docker, Nginx and Hetzner, with automated deployments via GitHub CI/CD (GitHub Actions).',
+
+      'project4.title': 'Quiz Challenge – Java Spring Boot & Angular',
+      'project4.description': 'Full-stack quiz web application built as a coding challenge, with a Java Spring Boot REST API, Angular frontend and MySQL database, deployed on quizz.guita.dev.',
+      'project4.contribution1': 'Implemented the backend in Java Spring Boot: REST API design, domain model and persistence layer with MySQL.',
+      'project4.contribution2': 'Developed the Angular frontend for the quiz flow, result display and integration with the backend API, and deployed the application using Docker, Nginx, Hetzner and GitHub Actions.',
+      'project5.title': 'Events Management Platform',
+      'project5.description': 'Full-stack web application for event and participant management, built with a TypeScript Node.js/Express backend, PostgreSQL database, and a React + Vite + TypeScript frontend. Fully containerised and deployed on Hetzner using Docker, Nginx and GitHub CI/CD.',
+
+      'project5.contribution1': 'Developed the backend in TypeScript (Node.js/Express) with a clean REST API architecture and PostgreSQL database schema.',
+      'project5.contribution2': 'Built the full frontend using React, Vite and TypeScript with modern reusable components and responsive UI.',
+      'project5.contribution3': 'Set up complete containerisation (Docker), Nginx reverse proxy, Hetzner deployment and automated CI/CD with GitHub Actions.',
     // Education
     'education1.degree': 'Computer Science (Bachelor)',
     'education1.school': 'Hochschule Darmstadt',
@@ -101,7 +119,7 @@ const translations = {
     'location': 'Dieburg, Hessen',
     'email': 'guirauld.tayon@stud.h-da.de',
     'phone': '+49 176 29053181',
-    'description': `Mein Name ist Guirauld Tayon. Ich bin ein leidenschaftlicher IT-Student und Entwickler. Ich lerne schnell und habe eine selbstlernende Einstellung. Ich liebe es, neue Technologien zu entdecken und habe eine Leidenschaft für Problemlösungen. Ich arbeite gerne mit modernen Web-Technologien, KI-gestützten Lösungen und Cloud Computing.`,
+      'description': `Mein Name ist Guirauld Tayon. Ich bin ein leidenschaftlicher IT-Student und Entwickler. Ich lerne schnell und habe eine selbstlernende Einstellung. Ich liebe es, neue Technologien zu entdecken und habe eine Leidenschaft für Problemlösungen. Ich arbeite gerne mit modernen Web-Technologien, KI-gestützten Lösungen und Cloud Computing. Durch mehr als drei Jahre Erfahrung im IT-Support habe ich starke Kommunikationsfähigkeiten entwickelt, arbeite gerne direkt mit Anwendern und kann komplexe technische Themen verständlich und klar erklären.`,
     'currentJob': 'Werkstudent IT Operations bei StandardLife',
     'bachelorThesis': 'Bachelorarbeit – KI-gestützte Automatisierung von Softwaretests',
     'educationHDA': 'Informatik B.Sc. - Hochschule Darmstadt',
@@ -128,20 +146,40 @@ const translations = {
     'experience2.point2': 'Kombination von Retrieval-Augmented Generation (RAG), OpenAI GPT-4o API und SentenceTransformer-Modellen zur Kontextanreicherung und Generierung strukturierter Testfälle',
     'experience2.point3': 'Implementierung eines Backends mit Python (Flask) und PostgreSQL; Entwurf einer modernen UI mit React, Vite und TypeScript',
     'experience2.point4': 'Schlüsselkomponenten: Anforderungsklarheitsprüfung (Q&A-System), semantische Suche mit Embeddings, Prompt Engineering und Formatvalidierung',
-    'experience2.point5': 'Deployment-Setup mit Docker und Azure Cloud; CI/CD-Pipeline geplant mit GitLab und Terraform',
+      'experience2.point5': 'Deployment-Setup mit Docker, Nginx und Hetzner Cloud; CI/CD-Pipeline umgesetzt mit GitHub und GitHub Actions.',
 
     // Projects
     'project1.title': 'We3ve - Elektromobilitätsplattform',
-    'project1.description': 'Erweiterung einer bestehenden Mobile App (we3ve) zum Thema Elektromobilität (Carsharing und Buchung) mit zusätzlichen Funktionen und Refactoring.',
-    'project1.contribution1': 'Teamleiter des Automation-Test-Teams (Backend, Frontend)',
-    'project1.contribution2': 'PlayStore-Deployment',
+      'project1.description': 'Erweiterung der We3ve-Mobile-App (Elektromobilitätsplattform) und Leitung aller Testaktivitäten. Aufbau von automatisierten Mobile-UI-Tests mit Maestro für Flutter sowie Sicherstellung hochwertiger Releases.',
+      'project1.contribution1': 'Teamleiter des Testteams (manuell & automatisiert); verantwortlich für Teststrategie, Aufgabenplanung und Sicherstellung der Produktqualität.',
+      'project1.contribution2': 'Implementierung von mobilen UI-Automationstests für die Flutter-App mit Maestro.',
+      'project1.contribution3': 'Enge Zusammenarbeit mit Backend- und Frontend-Teams zur Validierung der API-Flows und Analyse von Mobilproblemen.',
+
 
     'project2.title': 'Never-have-I-Ever Website',
     'project2.description': 'Multiplayer-Spiel-Website mit Benutzerregistrierung, Playlist-Erstellung, Fragenmanagement und Echtzeit-Multiplayer-Räumen mit Socket.IO.',
     'project2.contribution1': 'Full-Stack-Entwicklung mit Echtzeit-Kommunikation über Socket.IO',
-    'project2.contribution2': 'Benutzerregistrierungs- und Raumverwaltungssystem',
+      'project2.contribution2': 'Benutzerregistrierungs-, Playlist- und Raumverwaltungssystem sowie Deployment mit Docker, Nginx auf Hetzner und CI/CD über GitHub Actions.',
 
-    // Education
+
+      'project3.title': 'KI-basierter Testfall-Generator (Bachelorarbeit)',
+      'project3.description': 'Prototyp, der strukturierte Testfälle automatisch aus textuellen Anforderungen generiert, basierend auf Large Language Models, RAG und einem Python/Flask-Backend, das auf Hetzner bereitgestellt wurde.',
+      'project3.contribution1': 'Entwurf und Implementierung der kompletten Backend-Architektur in Python (Flask) mit PostgreSQL, RAG und semantischer Suche.',
+      'project3.contribution2': 'Entwicklung des Web-Frontends mit React, Vite und TypeScript und Integration mit dem KI-Backend.',
+      'project3.contribution3': 'Deployment des Gesamtsystems mit Docker, Nginx und Hetzner sowie automatisierten Deployments über GitHub CI/CD (GitHub Actions).',
+
+      'project4.title': 'Quiz Challenge – Java Spring Boot & Angular',
+      'project4.description': 'Full-Stack Quiz-Webanwendung, entwickelt als Coding-Challenge mit einem Java Spring Boot REST-Backend, Angular-Frontend und MySQL-Datenbank, bereitgestellt auf quizz.guita.dev.',
+      'project4.contribution1': 'Implementierung des Backends in Java Spring Boot: REST-API-Design, Domänenmodell und Persistenzschicht mit MySQL.',
+      'project4.contribution2': 'Entwicklung des Angular-Frontends für den Quizablauf, Ergebnisanzeige und Integration mit der Backend-API sowie Deployment mit Docker, Nginx, Hetzner und GitHub Actions.',
+      // Project 5 – Events Platform
+      'project5.title': 'Event-Management-Plattform',
+      'project5.description': 'Full-Stack Webanwendung zur Verwaltung von Events und Teilnehmern, entwickelt mit einem TypeScript Node.js/Express Backend, PostgreSQL und einem React + Vite + TypeScript Frontend. Vollständig containerisiert und mit Docker, Nginx und GitHub CI/CD auf Hetzner bereitgestellt.',
+
+      'project5.contribution1': 'Entwicklung des Backends in TypeScript (Node.js/Express) mit klarer REST-API-Architektur und PostgreSQL-Datenbankschema.',
+      'project5.contribution2': 'Entwicklung des kompletten Frontends mit React, Vite und TypeScript sowie modernen, wiederverwendbaren Komponenten.',
+      'project5.contribution3': 'Einrichtung der vollständigen Containerisierung (Docker), Nginx Reverse Proxy, Deployment auf Hetzner und automatisierte CI/CD-Pipelines mit GitHub Actions.',
+      // Education
     'education1.degree': 'Allgemeine Informatik (Bachelor)',
     'education1.school': 'Hochschule Darmstadt',
     'education1.period': 'Okt 2020 - Juni 2025',
