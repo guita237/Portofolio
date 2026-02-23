@@ -186,11 +186,14 @@ export default function Home() {
         "Nginx",
         "Hetzner Cloud"
     ],
-        link: "https://we3ve.de/",
-        repo: "https://github.com/guita237/FWE",
+        link: "https://diy.vcd.org/projekte/we3ve",
         contributions: [
         t('project1.contribution1'),
-        t('project1.contribution2')
+        t('project1.contribution2'),
+        t('project1.contribution3'),
+        t('project1.contribution4'),
+
+
     ]
 },
 {
@@ -293,6 +296,14 @@ export default function Home() {
   ];
 
   const education = [
+
+
+      {
+        degree: t('education0.degree'),
+        school: t('education0.school'),
+        period: t('education0.period'),
+        location: "Darmstadt"
+      },
     {
       degree: t('education1.degree'),
       school: t('education1.school'),

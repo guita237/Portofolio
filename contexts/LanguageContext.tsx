@@ -26,7 +26,7 @@ const translations = {
     'projects': 'Projects',
     'contactSection': 'Contact',
     'location': 'Dieburg, Hessen',
-    'email': 'guirauld.tayon@stud.h-da.de',
+    'email': 'noumboussitayon@gmail.com',
     'phone': '+49 176 29053181',
       'description': `My name is Guirauld Tayon. I am a passionate IT student and developer in my daily life.I have strong software testing experience, including test case design, manual testing and automation. I worked extensively with Maestro for mobile UI automation and led testing efforts in real projects, ensuring quality and stability across backend, frontend and mobile applications. I love to learn and explore new technologies and am passionate about problem-solving. I love working with modern web technologies, AI-driven solutions, and cloud computing. Through more than three years in IT support, I have developed strong communication skills, enjoy working directly with users, and feel comfortable explaining complex technical topics in a clear and simple way.`,
 
@@ -63,7 +63,7 @@ const translations = {
       'project1.contribution1': 'Team Lead of the testing team (manual & automation), responsible for planning the test strategy, organising testing tasks and ensuring overall product quality.',
       'project1.contribution2': 'Implemented mobile UI automated tests using Maestro for the Flutter application.',
       'project1.contribution3': 'Collaborated with backend and frontend teams to validate API flows and debug mobile issues.',
-
+        'project1.contribution4':  'Handled deployment to Play Store and App Store, coordinated testing phases and bug fixing in close collaboration with development teams.',
     'project2.title': 'Never-have-I-Ever Website',
     'project2.description': 'Multiplayer game website with user registration, playlist creation, question management, and real-time multiplayer rooms using Socket.IO.',
     'project2.contribution1': 'Full-stack development with real-time communication using Socket.IO',
@@ -87,6 +87,11 @@ const translations = {
       'project5.contribution2': 'Built the full frontend using React, Vite and TypeScript with modern reusable components and responsive UI.',
       'project5.contribution3': 'Set up complete containerisation (Docker), Nginx reverse proxy, Hetzner deployment and automated CI/CD with GitHub Actions.',
     // Education
+
+    'education0.degree': 'Computer Science(Master)',
+    'education0.school': 'TU Darmstadt',
+    'education0.period': 'Oct 2025 - now',
+
     'education1.degree': 'Computer Science (Bachelor)',
     'education1.school': 'Hochschule Darmstadt',
     'education1.period': 'Oct 2020 - June 2025',
@@ -117,7 +122,7 @@ const translations = {
     'projects': 'Projekte',
     'contactSection': 'Kontakt',
     'location': 'Dieburg, Hessen',
-    'email': 'guirauld.tayon@stud.h-da.de',
+    'email': 'noumboussitayon@gmail.com',
     'phone': '+49 176 29053181',
       'description': `Mein Name ist Guirauld Tayon. Ich bin ein leidenschaftlicher IT-Student und Entwickler. Ich lerne schnell und habe eine selbstlernende Einstellung. Ich liebe es, neue Technologien zu entdecken und habe eine Leidenschaft für Problemlösungen. Ich arbeite gerne mit modernen Web-Technologien, KI-gestützten Lösungen und Cloud Computing. Durch mehr als drei Jahre Erfahrung im IT-Support habe ich starke Kommunikationsfähigkeiten entwickelt, arbeite gerne direkt mit Anwendern und kann komplexe technische Themen verständlich und klar erklären.`,
     'currentJob': 'Werkstudent IT Operations bei StandardLife',
@@ -154,6 +159,7 @@ const translations = {
       'project1.contribution1': 'Teamleiter des Testteams (manuell & automatisiert); verantwortlich für Teststrategie, Aufgabenplanung und Sicherstellung der Produktqualität.',
       'project1.contribution2': 'Implementierung von mobilen UI-Automationstests für die Flutter-App mit Maestro.',
       'project1.contribution3': 'Enge Zusammenarbeit mit Backend- und Frontend-Teams zur Validierung der API-Flows und Analyse von Mobilproblemen.',
+      'project1.contribution4':  'Deployment in Play Store und App Store, Koordination von Testphasen und Fehlerbehebung in enger Zusammenarbeit mit den Entwicklungsteams.',
 
 
     'project2.title': 'Never-have-I-Ever Website',
@@ -180,6 +186,10 @@ const translations = {
       'project5.contribution2': 'Entwicklung des kompletten Frontends mit React, Vite und TypeScript sowie modernen, wiederverwendbaren Komponenten.',
       'project5.contribution3': 'Einrichtung der vollständigen Containerisierung (Docker), Nginx Reverse Proxy, Deployment auf Hetzner und automatisierte CI/CD-Pipelines mit GitHub Actions.',
       // Education
+    'education0.degree': 'Informatik (Master)',
+    'education0.school': 'TU Darmstadt',
+    'education0.period': 'Okt 2025 - jetzt',
+
     'education1.degree': 'Allgemeine Informatik (Bachelor)',
     'education1.school': 'Hochschule Darmstadt',
     'education1.period': 'Okt 2020 - Juni 2025',
