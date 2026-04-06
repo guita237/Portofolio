@@ -108,37 +108,110 @@ export default function Home() {
 
   }, []);
 
-  const skills = [
-    { name: 'Azure Cloud', icon: '☁️' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'TypeScript', icon: '📘' },
-    { name: 'React', icon: '⚛️' },
-    { name: 'Next.js', icon: '▲' },
-    { name: 'Flutter', icon: '📱' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Express', icon: '🚀' },
-    { name: 'Flask', icon: '🍶' },
-    { name: 'PostgreSQL', icon: '🐘' },
-    { name: 'MySQL', icon: '🐬' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'Git', icon: '📚' },
-    { name: 'RESTful API', icon: '🔗' },
-    { name: 'OpenCV', icon: '👁️' },
-    { name: 'LLM', icon: '🧠' },
-    { name: 'RAG', icon: '📖' },
-    { name: 'Prompt Engineering', icon: '💬' },
-    { name: 'CI/CD', icon: '🔄' },
-    { name: 'C++', icon: '⚙️' },
-    { name: 'Java', icon: '☕' },
-    { name: 'PHP', icon: '🐘' },
-    { name: 'Chakra UI', icon: '🎨' },
-    { name: 'Tailwind', icon: '💨' },
-      { name: 'Team Lead – Testing', icon: '⭐' },
-      { name: 'Maestro (Mobile UI Automation)', icon: '📱' },
-      { name: 'Mobile Testing (Flutter)', icon: '🧪' },
-      { name: 'Test Planning & Strategy', icon: '📋' },
-  ];
+    const skillCategories = [
+        {
+            title: "Programmiersprachen",
+            icon: "💻",
+            skills: [
+                { name: 'Python', icon: '🐍' },
+                { name: 'Java', icon: '☕' },
+                { name: 'TypeScript', icon: '📘' },
+                { name: 'JavaScript', icon: '🟨' },
+                { name: 'C++', icon: '⚙️' },
+                { name: 'PHP', icon: '🐘' },
+            ]
+        },
+        {
+            title: "Frontend",
+            icon: "🎨",
+            skills: [
+                { name: 'React', icon: '⚛️' },
+                { name: 'Next.js', icon: '▲' },
+                { name: 'Angular', icon: '🅰️' },
+                { name: 'Flutter', icon: '📱' },
+                { name: 'HTML/CSS', icon: '🌐' },
+                { name: 'Tailwind', icon: '💨' },
+                { name: 'Chakra UI', icon: '🎨' },
+            ]
+        },
+        {
+            title: "Backend",
+            icon: "⚙️",
+            skills: [
+                { name: 'Node.js', icon: '🟢' },
+                { name: 'Express', icon: '🚀' },
+                { name: 'Flask', icon: '🍶' },
+                { name: 'Spring Boot', icon: '🌱' },
+                { name: 'REST-APIs', icon: '🔗' },
+                { name: 'Socket.IO', icon: '🔌' },
+            ]
+        },
+        {
+            title: "Datenbanken",
+            icon: "🗄️",
+            skills: [
+                { name: 'PostgreSQL', icon: '🐘' },
+                { name: 'MySQL', icon: '🐬' },
+                { name: 'MongoDB', icon: '🍃' },
+            ]
+        },
+        {
+            title: "DevOps & Cloud",
+            icon: "☁️",
+            skills: [
+                { name: 'Docker', icon: '🐳' },
+                { name: 'Nginx', icon: '🔄' },
+                { name: 'Azure', icon: '☁️' },
+                { name: 'Hetzner Cloud', icon: '🏠' },
+                { name: 'GitHub Actions', icon: '⚡' },
+                { name: 'GitLab CI/CD', icon: '🔄' },
+                { name: 'Linux', icon: '🐧' },
+            ]
+        },
+        {
+            title: "AI & Data",
+            icon: "🧠",
+            skills: [
+                { name: 'LLM', icon: '🧠' },
+                { name: 'RAG', icon: '📖' },
+                { name: 'Embeddings', icon: '🔢' },
+                { name: 'Prompt Engineering', icon: '💬' },
+                { name: 'OpenCV', icon: '👁️' },
+            ]
+        },
+        {
+            title: "Computer Graphics & Systems",
+            icon: "🎮",
+            skills: [
+                { name: 'OpenGL', icon: '🖼️' },
+                { name: 'GLUT', icon: '🔧' },
+                { name: 'TUIO', icon: '🖐️' },
+                { name: 'Multitouch Interfaces', icon: '👆' },
+                { name: 'Echtzeitsysteme', icon: '⏱️' },
+            ]
+        },
+        {
+            title: "Testing",
+            icon: "🧪",
+            skills: [
+                { name: 'Testautomatisierung', icon: '🤖' },
+                { name: 'UI-Testing', icon: '📱' },
+                { name: 'Maestro', icon: '🎭' },
+                { name: 'Jest', icon: '✓' },
+                { name: 'Team Lead – Testing', icon: '⭐' },
+            ]
+        },
+        {
+            title: "Weitere",
+            icon: "🛠️",
+            skills: [
+                { name: 'Google Play Deployment', icon: '📱' },
+                { name: 'Visual Studio Code', icon: '📝' },
+                { name: 'Git', icon: '📚' },
+                { name: 'Postman', icon: '📬' },
+            ]
+        }
+    ];
 
   const experiences = [
     {
@@ -563,27 +636,28 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" ref={skillsRef} className="skills-section py-16 sm:py-20 px-4 sm:px-6 animate-section">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 gradient-text">{t('skills')}</h2>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-            {skills.map((skill, index) => (
-              <div 
-                key={skill.name}
-                className="skill-item bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center shadow-lg hover-lift group"
-              >
-                <div className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform">
-                  {skill.icon}
-                </div>
-                <div className="font-medium text-gray-800 dark:text-white text-xs sm:text-sm">
-                  {skill.name}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        <section id="skills" ref={skillsRef} className="skills-section py-16 sm:py-20 px-4 sm:px-6 animate-section">
+            <div className="max-w-7xl mx-auto">
+                <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 gradient-text">{t('skills')}</h2>
+
+                {skillCategories.map((category, catIndex) => (
+                    <div key={catIndex} className="mb-10">
+                        <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800 dark:text-white flex items-center gap-2">
+                            <span className="text-2xl">{category.icon}</span>
+                            {category.title}
+                        </h3>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+                            {category.skills.map((skill, index) => (
+                                <div key={index} className="skill-item bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center shadow-lg hover-lift group">
+                                    <div className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform">{skill.icon}</div>
+                                    <div className="font-medium text-gray-800 dark:text-white text-xs sm:text-sm">{skill.name}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
 
       {/* Experience Section */}
       <section id="experience" ref={experienceRef} className="experience-section py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 dark:bg-gray-800 animate-section">
