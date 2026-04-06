@@ -130,7 +130,7 @@ export default function Home() {
                 { name: 'Angular', icon: '🅰️' },
                 { name: 'Flutter', icon: '📱' },
                 { name: 'HTML/CSS', icon: '🌐' },
-                { name: 'Tailwind', icon: '💨' },
+                { name: 'Tailwind/GSAP', icon: '💨' },
                 { name: 'Chakra UI', icon: '🎨' },
             ]
         },
@@ -187,7 +187,7 @@ export default function Home() {
                 { name: 'GLUT', icon: '🔧' },
                 { name: 'TUIO', icon: '🖐️' },
                 { name: 'Multitouch Interfaces', icon: '👆' },
-                { name: 'Echtzeitsysteme', icon: '⏱️' },
+
             ]
         },
         {
@@ -198,7 +198,7 @@ export default function Home() {
                 { name: 'UI-Testing', icon: '📱' },
                 { name: 'Maestro', icon: '🎭' },
                 { name: 'Jest', icon: '✓' },
-                { name: 'Team Lead – Testing', icon: '⭐' },
+
             ]
         },
         {
@@ -206,7 +206,6 @@ export default function Home() {
             icon: "🛠️",
             skills: [
                 { name: 'Google Play Deployment', icon: '📱' },
-                { name: 'Visual Studio Code', icon: '📝' },
                 { name: 'Git', icon: '📚' },
                 { name: 'Postman', icon: '📬' },
             ]
