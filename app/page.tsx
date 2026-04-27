@@ -255,8 +255,7 @@ export default function Home() {
         "PlayStore Deployment",
         "GitHub Actions",
         "Docker",
-        "Nginx",
-        "Hetzner Cloud"
+        "Nginx"
     ],
         link: "https://diy.vcd.org/projekte/we3ve",
         contributions: [
